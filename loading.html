@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div id="gameover">
+      <p class="gameover">You got hit</p>
+      <div>
+        <p class="gameover">Your score:</p>
+      </div>
+      <p id="change" class="text-1">0</p>
+      
+      <button onclick="myFunction()" class="but">Restart</button>
+      <script src="gameover.js"></script>
+    </div>
+
+    <div>
+      <div class="box">
+        <p class="text">Score:</p>
+        <p id="text" class="text">0</p>
+      </div>
+      <script src="sketch.js"></script>
+      <script src="spaceship.js"></script>
+      <script src="asteroids.js"></script>
+      <script src="laser.js"></script>
+    </div>
+  </body>
+</html>

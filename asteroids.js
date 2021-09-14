@@ -1,12 +1,31 @@
 class Asteroids{
-	constructor(){
-		this.r=random(100,90);
-		this.boost=random(floor(-2),floor(2));
-		this.pos=createVector(random(0,1340),random(0,640));
+	constructor(pos,r){
+		if(pos){
+			this.pos=pos.copy();
+		}
+		else{
+			this.pos=createVector(random(0,1340),random(0,640));
+		}
+		if(r){
+			
+		this.r=r;
+		}
+		else{
+			this.r=60;
+		}
+		this.boost_x=random(-1,1);
+		this.boost_y=random(-1,1);
 	}
 	asteroids_move(){
-			this.pos.x+=this.boost;
-			this.pos.y+=this.boost;
+			this.pos.x+=this.boost_x;
+			this.pos.y+=this.boost_y;
+	}
+	breakup(){
+		var newA=[];
+		newA[0]=(new Asteroids(this.pos,this.r*0.5));
+		newA[1]=(new Asteroids(this.pos,this.r*0.5));
+		return newA;
+
 	}
 	show(){
 
